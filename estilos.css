@@ -1,0 +1,183 @@
+/* === ESTILOS GENERALES === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom right, #e3f2fd, #bbdefb);
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* === CABECERA === */
+.header {
+  background-color: #0078D7;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+}
+
+/* === MENÚ === */
+.nav {
+  display: flex;
+  gap: 15px;
+}
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* === BOTONES === */
+.btn-menu {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+.boton-tema {
+  background-color: white;
+  color: #0078D7;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.boton-tema:hover { background-color: #e6e6e6; }
+
+/* === SECCIONES === */
+.contenedor {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.perfil {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 5px solid #0078D7;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+/* === SOBRE MÍ === */
+.sobre {
+  margin-top: 3rem;
+}
+.sobre h2 { color: #0078D7; margin-bottom: 1.5rem; }
+.sobre-contenido {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+  gap: 2rem; max-width: 900px; margin: 0 auto;
+}
+.perfil-sobre {
+  width: 200px; height: 200px; border-radius: 50%; object-fit: cover;
+  border: 5px solid #0078D7; box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+.sobre-texto { flex: 2 1 400px; text-align: left; }
+.sobre-texto p { margin-bottom: 1rem; color: #444; line-height: 1.6; }
+.datos { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem 1.5rem; margin-top: 1.2rem; }
+.datos div { display: flex; align-items: center; gap: 8px; font-weight: 500; color: #0078D7; }
+.datos span { font-size: 1.3rem; }
+
+/* === HABILIDADES === */
+.habilidades {
+  margin-top: 3rem; text-align: left; max-width: 600px;
+  margin-left: auto; margin-right: auto;
+}
+.habilidades h2 { text-align: center; color: #0078D7; margin-bottom: 1.5rem; }
+.habilidad { margin-bottom: 1rem; }
+.barra {
+  background-color: #e0e0e0; border-radius: 10px; overflow: hidden; height: 20px;
+}
+.progreso {
+  background-color: #0078D7; height: 100%; width: 0;
+  border-radius: 10px; transition: width 1.2s ease-in-out;
+}
+
+/* === PROYECTOS === */
+.proyectos { margin-top: 3rem; text-align: center; }
+.grid-proyectos {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem; justify-content: center;
+}
+.tarjeta {
+  background: white; border-radius: 12px; overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex; flex-direction: column;
+}
+.tarjeta img { width: 100%; height: 180px; object-fit: cover; }
+.tarjeta:hover { transform: translateY(-8px); box-shadow: 0 6px 14px rgba(0,0,0,0.15); }
+.btn-ver {
+  background-color: #0078D7; color: white; padding: 8px 16px;
+  border-radius: 6px; text-decoration: none; margin: 1rem auto;
+  transition: background 0.3s;
+}
+.btn-ver:hover { background-color: #005ea6; }
+
+/* === FOOTER === */
+footer {
+  background-color: #0078D7; color: white;
+  text-align: center; padding: 1rem; margin-top: 2rem;
+}
+
+/* === ANIMACIONES === */
+.animado {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease-out;
+}
+.animado.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === MODO OSCURO === */
+body.modo-oscuro {
+  background: linear-gradient(to bottom right, #1e1e1e, #121212);
+  color: #f1f1f1;
+}
+body.modo-oscuro .header,
+body.modo-oscuro footer,
+body.modo-oscuro .nav { background-color: #1e1e1e; }
+body.modo-oscuro .boton-tema { background-color: #333; color: #f1f1f1; }
+body.modo-oscuro .progreso { background-color: #00bcd4; }
+body.modo-oscuro .tarjeta { background-color: #222; box-shadow: 0 4px 10px rgba(255,255,255,0.05); }
+body.modo-oscuro .tarjeta h3 { color: #00bcd4; }
+body.modo-oscuro .tarjeta p { color: #ccc; }
+body.modo-oscuro .sobre-texto p { color: #ccc; }
+body.modo-oscuro .datos div { color: #00bcd4; }
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .nav {
+    position: absolute; top: 70px; right: 0;
+    background-color: #0078D7; flex-direction: column;
+    width: 100%; text-align: center; gap: 10px;
+    padding: 15px 0; display: none;
+  }
+  .nav.mostrar { display: flex; }
+  .btn-menu { display: block; }
+  .boton-tema { position: absolute; top: 80px; right: 10px; }
+  .sobre-contenido { flex-direction: column; text-align: center; }
+  .datos { grid-template-columns: 1fr; }
+}

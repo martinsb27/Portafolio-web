@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio de Sergio Sánchez</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>💻 Sergio Sánchez</h1>
+
+    <!-- Botón del menú móvil -->
+    <button id="btnMenu" class="btn-menu">☰</button>
+
+    <nav id="nav" class="nav">
+      <a href="#inicio" class="activo">Inicio</a>
+      <a href="#sobre">Sobre mí</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <!-- Botón para cambiar tema -->
+    <button id="btnTema" class="boton-tema">🌙 Modo oscuro</button>
+  </header>
+
+  <!-- SECCIÓN INICIO -->
+  <main id="inicio" class="contenedor">
+    <img src="FOTO WHASAPP.jpg" alt="Foto de Sergio" class="perfil">
+    <h2>¡Hola! Soy Sergio 👋</h2>
+    <p>Desarrollador en formación. Apasionado por la tecnología, los datos y el diseño web.</p>
+    <a href="#proyectos" class="btn-principal">Ver mis proyectos</a>
+  </main>
+
+  <!-- SECCIÓN SOBRE MÍ -->
+  <section id="sobre" class="sobre contenedor animado oculto">
+    <h2>Sobre mí</h2>
+    <div class="sobre-contenido">
+      <div class="sobre-imagen">
+        <img src="FOTO WHASAPP.jpg" alt="Foto de Sergio" class="perfil-sobre">
+      </div>
+
+      <div class="sobre-texto">
+        <p>👋 Hola, soy <strong>Sergio Sánchez</strong>, un desarrollador en formación apasionado por la tecnología, los datos y el diseño web. Me gusta aprender nuevas herramientas y crear proyectos que combinen lógica, creatividad y funcionalidad.</p>
+
+        <p>Actualmente estoy enfocado en fortalecer mis habilidades en <strong>HTML, CSS, JavaScript, Python y Power BI</strong>, con el objetivo de especializarme en el desarrollo web y el análisis de datos.</p>
+
+        <div class="datos">
+          <div><span>📍</span> Lima, Perú</div>
+          <div><span>🎓</span> Estudiante de desarrollo y análisis de datos</div>
+          <div><span>💻</span> Frontend + Python</div>
+          <div><span>🎮</span> Aficionado a la tecnología y el cine</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN HABILIDADES -->
+  <section id="habilidades" class="habilidades contenedor animado oculto">
+    <h2>Mis Habilidades</h2>
+
+    <div class="habilidad">
+      <p>HTML</p>
+      <div class="barra">
+        <div class="progreso" data-porcentaje="90"></div>
+      </div>
+    </div>
+
+    <div class="habilidad">
+      <p>CSS</p>
+      <div class="barra">
+        <div class="progreso" data-porcentaje="80"></div>
+      </div>
+    </div>
+
+    <div class="habilidad">
+      <p>JavaScript</p>
+      <div class="barra">
+        <div class="progreso" data-porcentaje="70"></div>
+      </div>
+    </div>
+
+    <div class="habilidad">
+      <p>Python</p>
+      <div class="barra">
+        <div class="progreso" data-porcentaje="60"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN PROYECTOS -->
+  <section id="proyectos" class="proyectos contenedor animado oculto">
+    <h2>Mis Proyectos</h2>
+    <div class="grid-proyectos">
+      <div class="tarjeta">
+        <img src="proyecto1.png" alt="Proyecto 1">
+        <h3>Portafolio Web</h3>
+        <p>Mi primer sitio web con HTML, CSS y JavaScript, totalmente responsive y con modo oscuro.</p>
+        <a href="#" class="btn-ver">Ver más</a>
+      </div>
+
+      <div class="tarjeta">
+        <img src="proyecto 2.png" alt="Dashboard de Datos">
+        <h3>Dashboard de Datos</h3>
+        <p>Un panel interactivo con Power BI y Python para analizar tendencias de películas y series.</p>
+        <a href="#" class="btn-ver">Ver más</a>
+      </div>
+
+      <div class="tarjeta">
+        <img src="proyecto 3.png" alt="Juego de Memoria">
+        <h3>Juego de Memoria</h3>
+        <p>Un divertido juego web con JavaScript que pone a prueba la memoria visual del jugador.</p>
+        <a href="#" class="btn-ver">Ver más</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Sergio Sánchez — Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
